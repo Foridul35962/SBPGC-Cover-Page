@@ -18,7 +18,7 @@ transition: Bounce,
 });
   
   return (
-    <div className="bg-gray-800 text-white flex">
+    <div className={`${allData? 'bg-white' : 'bg-gray-800'} text-white flex`}>
       {!allData && <Informations setAllData={setAllData} />}
       {allData && <CoverPage allData={allData} setAllData={setAllData} notify={notify} />}
       <ToastContainer />
