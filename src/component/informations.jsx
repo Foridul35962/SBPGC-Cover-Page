@@ -1,29 +1,34 @@
 import { useRef, useState } from "react"
+import SubjectInfo from "./subjectInfo";
 
-const information = ({setAllData}) => {
-
+const information = ({ setAllData }) => {
     const examYearElement = useRef();
     const studentNameElement = useRef();
     const studentRollElement = useRef();
-    const studentRegElement= useRef();
+    const studentRegElement = useRef();
     const studentSessionElement = useRef();
     const [semester, setSemester] = useState("select semester");
     const [courseName, setCourseName] = useState("select course name");
     const [teacherName, setTeacherName] = useState("select teacher name");
-    const handleSubmit = (event) =>{
+
+    const selectedSemester = SubjectInfo.find((item) => item.semester === semester);
+    const subjects = selectedSemester ? selectedSemester.subject : [];
+
+
+    const handleSubmit = (event) => {
         event.preventDefault();
         const examYear = examYearElement.current.value;
         const studentName = studentNameElement.current.value;
         const studentRoll = studentRollElement.current.value;
         const studentReg = studentRegElement.current.value;
         const studentSession = studentSessionElement.current.value;
-        const allData={semester,examYear,courseName: JSON.parse(courseName),teacherName,studentName,studentRoll,studentReg,studentSession};
+        const allData = { semester, examYear, courseName: JSON.parse(courseName), teacherName, studentName, studentRoll, studentReg, studentSession };
         setAllData(allData);
-        examYearElement.current.value="";
-        studentNameElement.current.value="";
-        studentRollElement.current.value="";
-        studentRegElement.current.value="";
-        studentSessionElement.current.value="";
+        examYearElement.current.value = "";
+        studentNameElement.current.value = "";
+        studentRollElement.current.value = "";
+        studentRegElement.current.value = "";
+        studentSessionElement.current.value = "";
     }
     return (
         <div className="w-full flex flex-col justify-center items-center py-10 px-7">
@@ -56,24 +61,22 @@ const information = ({setAllData}) => {
                             <label htmlFor="courseName" className="mr-2">Your Course Name:</label>
                             <>
                                 {
-                                    semester === '2nd Year 2nd Semester' && (
-                                        <select className="bg-amber-600 p-1 cursor-pointer rounded-xl" id='courseName' name="" value={courseName} onChange={(e) => { setCourseName(e.target.value) }} required>
-                                            <option value={JSON.stringify({ name: "", code: "" })}>Subject</option>
-                                            <option value={JSON.stringify({ name: "Database Management System", code: "520222" })}>DBMS</option>
-                                            <option value={JSON.stringify({ name: "Microprocessor And Assembly Language", code: "520224" })}>Microprocessor</option>
-                                            <option value={JSON.stringify({ name: "Design And Analysis of Algorithm", code: "520226" })}>Algorithm</option>
-                                        </select>
-                                    )
-                                }
-                                {
-                                    semester === '3rd Year 1st Semester' && (
-                                        <select className="bg-amber-600 p-1 cursor-pointer rounded-xl" id='courseName' name="" value={courseName} onChange={(e) => { setCourseName(e.target.value) }} required>
-                                            <option value={JSON.stringify({ name: "", code: "" })}>Subject</option>
-                                            <option value={JSON.stringify({ name: "Peripheral and Interfacing", code: "530202" })}>Peripheral</option>
-                                            <option value={JSON.stringify({ name: "Data and Telecommunications", code: "530204" })}>Telecommunications</option>
-                                            <option value={JSON.stringify({ name: "Operating System", code: "530206" })}>Operating System</option>
-                                        </select>
-                                    )
+                                    <select
+                                        value={courseName} className="bg-amber-600 p-1 w-30 xs:w-50 cursor-pointer rounded-xl"
+                                        onChange={(e) => setCourseName(e.target.value)}
+                                        required
+                                        disabled={subjects.length === 0}
+                                    >
+                                        <option value="select course name">Select Course</option>
+                                        {subjects.map((subj) => (
+                                            <option
+                                                key={subj.code}
+                                                value={JSON.stringify({ name: subj.name, code: subj.code })}
+                                            >
+                                                {subj.name.split(" ")[0]}
+                                            </option>
+                                        ))}
+                                    </select>
                                 }
                             </>
                         </div>
