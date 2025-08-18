@@ -1,5 +1,6 @@
 import { useRef, useState } from "react"
 import SubjectInfo from "./subjectInfo";
+import TeacherInfo from "./teacherInfo"
 
 const information = ({ setAllData }) => {
     const examYearElement = useRef();
@@ -106,9 +107,9 @@ const information = ({ setAllData }) => {
                             <label htmlFor="teacherName">Teacher Name:</label>
                             <select className="bg-amber-600 w-30 xs:50 p-1 cursor-pointer rounded-xl" id='teacherName' name="" required value={teacherName} onChange={(e) => setTeacherName(e.target.value)}>
                                 <option value="">Teacher Name</option>
-                                <option value="Shamima Nasrin Daisy">Shamima Nasrin Daisy</option>
-                                <option value="Md. Habibur Rahman">Md. Habibur Rahman</option>
-                                <option value="A.Z.M Azizul Bahar">A.Z.M Azizul Bahar</option>
+                                {TeacherInfo.map((teacher, idx)=>(
+                                    <option key={idx} value={JSON.stringify({ name: teacher.name, position: teacher.position })}>{teacher.name}</option>
+                                ))}
                             </select>
                         </div>
                     </div>

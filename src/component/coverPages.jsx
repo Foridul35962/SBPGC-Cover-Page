@@ -71,10 +71,8 @@ const coverPage = ({ allData, setAllData, notify }) => {
 
             <div className="text-2xl border-2 py-2.5 px-5 w-xs">
               <h1 className="w-full text-center text-3xl font-bold">Submitted To</h1>
-              <p>{allData.teacherName}</p>
-              <p>{`${allData.teacherName==='Shamima Nasrin Daisy'? 'Assistant': 
-                allData.teacherName==='A.Z.M Azizul Bahar' ? 'Associate':""
-              } Professor`}</p>
+              <p>{JSON.parse(allData.teacherName).name}</p>
+              <p>{JSON.parse(allData.teacherName).position}</p>
               <p>Department of CSE,</p>
               <p>SBPGC</p>
             </div>
