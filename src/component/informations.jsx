@@ -112,6 +112,7 @@ const information = ({setAllData}) => {
                     <div className="w-full flex justify-center mt-10">
                         <button type="submit" className="text-3xl bg-blue-800 px-3 py-1.5 mb-10 rounded-2xl cursor-pointer hover:scale-105 active:bg-blue-900">Create Cover Page</button>
                     </div>
+                    <p>Author: Foridul</p>
                 </div>
             </form>
         </div>
