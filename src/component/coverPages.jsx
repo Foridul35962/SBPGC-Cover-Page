@@ -1,14 +1,14 @@
-// Certificate.jsx
+// coverPage.jsx
 import { useRef } from "react";
 import dfImage from "./images.png";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
-const Certificate = ({ allData }) => {
-  const certificateRef = useRef();
+const coverPage = ({ allData, setAllData, notify }) => {
+  const coverPageRef = useRef();
 
   const handleDownloadPDF = () => {
-    const input = certificateRef.current;
+    const input = coverPageRef.current;
 
     html2canvas(input, { scale: 2 }).then((canvas) => {
       const imgData = canvas.toDataURL("image/png");
@@ -17,14 +17,16 @@ const Certificate = ({ allData }) => {
       const pdfWidth = pdf.internal.pageSize.getWidth();
       const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
       pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-      pdf.save(`Certificate_${allData.studentName}.pdf`);
+      pdf.save(`CoverPage_${allData.studentName}_${allData.courseName.name}.pdf`);
     });
+    notify();
+    setAllData(null);
   };
 
   return (
     <div className="flex flex-col items-center gap-5">
       <div
-        ref={certificateRef}
+        ref={coverPageRef}
         className="text-black relative w-[768px] h-[1056px] bg-white overflow-hidden"
       >
         
@@ -34,7 +36,7 @@ const Certificate = ({ allData }) => {
           style={{ backgroundImage: `url(${dfImage})` }}
         ></div>
 
-        {/* Certificate content */}
+        {/* coverPage content */}
         <div className="relative z-10 flex flex-col items-start justify-start pt-10 pl-10">
           <div className="flex items-center justify-center gap-2">
             <div>
@@ -91,4 +93,4 @@ const Certificate = ({ allData }) => {
   );
 };
 
-export default Certificate;
+export default coverPage;

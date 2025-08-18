@@ -1,13 +1,27 @@
 import Informations from "./component/informations"
-import Certificates from "./component/certificates"
+import CoverPage from "./component/coverPages"
 import { useState } from "react";
+import { ToastContainer, toast, Bounce } from 'react-toastify';
 
 const App = () => {
   const [allData, setAllData] = useState(null);
+  const notify = () => toast.success('Cover Page is successfully downloaded!', {
+position: "top-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+transition: Bounce,
+});
+  
   return (
-    <div className="bg-gray-800 text-white w-screen flex">
+    <div className="bg-gray-800 text-white flex">
       {!allData && <Informations setAllData={setAllData} />}
-      {allData && <Certificates allData={allData} />}
+      {allData && <CoverPage allData={allData} setAllData={setAllData} notify={notify} />}
+      <ToastContainer />
     </div>
   )
 }
