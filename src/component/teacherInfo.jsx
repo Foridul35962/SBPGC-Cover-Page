@@ -16,8 +16,20 @@ const teacherInfo=[
         position:'Associate Professor'
     },
     {
+        name:'Zannat Afroz Prokriti',
+        position:'Associate Professor'
+    },
+    {
         name:'Shamima Nasrin Daisy',
         position:'Assistant Professor'
+    },
+    {
+        name:'Mustakim Billah Bedar',
+        position:'Lecturer'
+    },
+    {
+        name:'Humayra Jahan Nishat',
+        position:'Lecturer'
     },
 ]
 
