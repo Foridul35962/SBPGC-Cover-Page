@@ -117,6 +117,7 @@ const information = ({ setAllData }) => {
                         <button type="submit" className="text-3xl bg-blue-800 px-3 py-1.5 mb-5 w-50 rounded-2xl cursor-pointer hover:scale-105 active:bg-blue-900">Create Cover Page</button>
                     </div>
                     <p>Author: Foridul</p>
+                    <p className="text-sm text-red-600">For any update, contact me on FB: <a href="https://www.facebook.com/foridul35962" className="text-blue-300 underline" target="_main">click me</a></p>
                 </div>
             </form>
         </div>
