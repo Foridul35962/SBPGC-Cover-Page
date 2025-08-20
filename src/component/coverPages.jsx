@@ -44,7 +44,7 @@ const coverPage = ({ allData, setAllData, notify }) => {
             </div>
             <div>
               <h1 className="text-5xl font-bold text-center" style={{ color: '#065f46' }}>
-                SHAIKH BURHANUDDUB POST GRADUATE COLLEGE
+                SHAIKH BURHANUDDIN POST GRADUATE COLLEGE
               </h1>
             </div>
           </div>
