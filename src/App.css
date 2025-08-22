@@ -2,4 +2,8 @@
 
 @theme {
   --breakpoint-xs: 330px;
+  --font-Cambria: "Cambria";
+  --font-Palatino_Linotype: "Palatino Linotype";
+  --font-Georgia: "Georgia";
+  --font-Times_New_Roman: "Times New Roman";
 }

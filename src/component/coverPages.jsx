@@ -50,17 +50,17 @@ const coverPage = ({ allData, setAllData, notify }) => {
           </div>
 
           <div className="w-full mt-30 flex flex-col gap-5 text-center">
-            <h1 className="text-6xl font-semibold italic">LAB REPORT</h1>
-            <h1 className="text-5xl font-semibold italic">{`${allData.semester}, ${allData.examYear}`}</h1>
+            <h1 className="text-6xl font-semibold italic font-Cambria">LAB REPORT</h1>
+            <h1 className="text-[55px] font-semibold italic font-Palatino_Linotype">{`${allData.semester}, ${allData.examYear}`}</h1>
           </div>
 
           <div className="w-full mt-20 flex flex-col gap-5 text-center">
-            <h1 className="text-6xl font-semibold italic">Department Of CSE</h1>
-            <h1 className="text-4xl font-semibold italic">{`Course: ${allData.courseName.name} Lab`}</h1>
-            <h1 className="text-4xl font-semibold italic">{`Course Code: ${allData.courseName.code}`}</h1>
+            <h1 className="text-6xl font-semibold italic font-Georgia">Department Of CSE</h1>
+            <h1 className="text-4xl italic font-Georgia">{`Course: ${allData.courseName.name} Lab`}</h1>
+            <h1 className="text-4xl italic font-Georgia">{`Course Code: ${allData.courseName.code}`}</h1>
           </div>
 
-          <div className="flex gap-5 mt-30">
+          <div className="flex gap-5 mt-30 font-Times_New_Roman">
             <div className="text-2xl border-2 py-2.5 px-2 w-[340px] ml-5">
               <h1 className="w-full text-center text-3xl font-bold">Submitted By</h1>
               <p>{`Name: ${allData.studentName}`}</p>

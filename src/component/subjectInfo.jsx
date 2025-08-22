@@ -22,7 +22,7 @@ const subjectInfo = [
         ]
     },
     {
-        semester: '2nd Year 1st Semester',
+        semester: '2nd Year 3rd Semester',
         subject: [
             {
                 name: 'Object Oriented Programming',
@@ -35,7 +35,7 @@ const subjectInfo = [
         ]
     },
     {
-        semester: '2nd Year 2nd Semester',
+        semester: '2nd Year 4th Semester',
         subject: [
             {
                 name: 'Database Management System',
@@ -52,7 +52,7 @@ const subjectInfo = [
         ]
     },
     {
-        semester: '3rd Year 1st Semester',
+        semester: '3rd Year 5th Semester',
         subject: [
             {
                 name: 'Peripheral and Interfacing',
@@ -69,7 +69,7 @@ const subjectInfo = [
         ]
     },
     {
-        semester: '3rd Year 2nd Semester',
+        semester: '3rd Year 6th Semester',
         subject: [
             {
                 name: 'Software Engineering',
@@ -86,7 +86,7 @@ const subjectInfo = [
         ]
     },
     {
-        semester: '4th Year 1st Semester',
+        semester: '4th Year 7th Semester',
         subject: [
             {
                 name: 'Artificial Intelligence',
@@ -107,7 +107,7 @@ const subjectInfo = [
         ]
     },
     {
-        semester: '4th Year 2nd Semester',
+        semester: '4th Year 8th Semester',
         subject: [
             {
                 name: 'Network and Information Security',

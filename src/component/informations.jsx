@@ -42,15 +42,15 @@ const information = ({ setAllData }) => {
                             <div className="flex-row">
                                 <label htmlFor="semesterId" className="mr-2">Your Semester: </label>
                                 <select className="bg-orange-600 p-1 cursor-pointer rounded-xl" id='semesterId' name="1st" required value={semester} onChange={(e) => setSemester(e.target.value)}>
-                                    <option value="1st Year 1st Semester">semester</option>
+                                    <option value="">semester</option>
                                     <option value="1st Year 1st Semester">1st</option>
                                     <option value="1st Year 2nd Semester">2nd</option>
-                                    <option value="2nd Year 1st Semester">3rd</option>
-                                    <option value="2nd Year 2nd Semester">4th</option>
-                                    <option value="3rd Year 1st Semester">5th</option>
-                                    <option value="3rd Year 2nd Semester">6th</option>
-                                    <option value="4th Year 1st Semester">7th</option>
-                                    <option value="4th Year 2nd Semester">8th</option>
+                                    <option value="2nd Year 3rd Semester">3rd</option>
+                                    <option value="2nd Year 4th Semester">4th</option>
+                                    <option value="3rd Year 5th Semester">5th</option>
+                                    <option value="3rd Year 6th Semester">6th</option>
+                                    <option value="4th Year 7th Semester">7th</option>
+                                    <option value="4th Year 8th Semester">8th</option>
                                 </select>
                             </div>
                             <div>
