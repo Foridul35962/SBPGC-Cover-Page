@@ -16,6 +16,10 @@ const teacherInfo=[
         position:'Associate Professor'
     },
     {
+        name:'Amita Chakraborty',
+        position:'Associate Professor'
+    },
+    {
         name:'Zannat Afroz Prokriti',
         position:'Associate Professor'
     },
