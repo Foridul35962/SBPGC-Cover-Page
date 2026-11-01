@@ -32,7 +32,7 @@ const teacherInfo=[
         position:'Lecturer'
     },
     {
-        name:'Humayra Jahan Nishat',
+        name:'Fariya Yeasmin',
         position:'Lecturer'
     },
 ]
